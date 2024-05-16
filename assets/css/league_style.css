@@ -1,0 +1,44 @@
+
+.league-table {
+    overflow: auto;
+    width: 100%;
+  }
+  
+  .league-table table {
+    border: 2px solid #dededf;
+    height: 100%;
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-spacing: 1px;
+    text-align: center;
+  }
+  
+  .league-table caption {
+    caption-side: top;
+    text-align: left;
+  }
+  
+  .league-table th {
+    border: 2px solid #dededf;
+    background-color: #0045e6;
+    color: #ffffff;
+    padding: 5px;
+  }
+  
+  .league-table td {
+    border: 2px solid #dededf;
+    padding: 5px;
+  }
+  
+  .league-table tr:nth-child(even) td {
+    background-color: #919fd9;
+    color: #1f1e1e;
+  }
+  
+  .league-table tr:nth-child(odd) td {background-color: #949494;
+    color: #1f1e1e;
+  }
+  .league-table tr:nth-child(even):hover td{background-color: #d7432c;}
+  .league-table tr:nth-child(odd):hover td{background-color: #d7432c;}
+  

@@ -1,0 +1,40 @@
+<header id="l-header">
+    <div class="container">
+        <div class="row logo">
+            <div class="col-lg-7">
+                <h1>{{ site.name }}</h1>
+            </div>
+
+            <div class="col-lg-5">
+              {% for line in site.shout %}
+                <p>{{ line }}</p>
+              {% endfor %}
+            </div>
+        </div>
+
+        <div class="row navicon">
+            <a href=""><i class="fa fa-navicon"></i></a>
+        </div>
+
+        <div class="row navbar">
+            <nav class="col-lg-8 col-md-8 col-xs-12">
+                <ul class="row">
+                    <li class="col-lg-3"><a href="{{ '/' | relative_url }}">GAMES</a></li>
+                    <!-- <li class="col-lg-3">
+                        <ul class="subnav">
+                            <a href="javascript:void(0)">LEAGUES</a>
+                            <li><a href="{{ '/category' | relative_url }}">CATEGORY</a></li>
+                            <li><a href="{{ '/tag' | relative_url }}">TAG</a></li>
+                            <li><a href="{{ '/tag' | relative_url }}">LEAGUE TABLE</a></li>
+                        </ul>
+                    </li> -->
+                    
+                    <li class="col-lg-3"><a href="{{ '/table' | relative_url }}">LEAGUE TABLE</a></li>
+                    <li class="col-lg-3"><a href="{{ '/series' | relative_url }}">REFERENCES</a></li>
+                    <li class="col-lg-3"><a href="{{ '/about' | relative_url }}">MAP BUILDER</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </div>
+</header>
