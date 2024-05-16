@@ -2,44 +2,34 @@
 layout: default
 ---
 
-{% assign my = site.data.me %}
-<div class="row" id="about">
-    <header id="title">
-        <img src="{{ my.avatar_img | relative_url }}">
-        <h1>{{ my.name }} | <small>{{ my.job | upcase }}</small></h1>
-    </header>
 
-    <section id="intro">
-        <h2>{{ my.hi }}</h2>
-        {% for line in my.intro %}
-        <p>{{ line }}</p>
-        {% endfor %}
-    </section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twilight Imperium Map Generator</title>
+    <link rel="stylesheet" href="./style-ti.scss">
+</head>
+<body>
 
-    <section id="skillsets">
-        <h2>SKILL SETS</h2>
-        {% for skillset in my.skills %}
-          <div>
-            <i class="{{ skillset.icon-class }}" title=" {{ skillset.name }}"></i>
-            {% for skill in skillset.list %}
-              <span>{{ skill }}</span>
-            {% endfor %}
-            <hr>
-          </div>
-        {% endfor %}
-    </section>
-
-    <section id="findme">
-        <h2>FIND ME ON</h2>
-        <ul>
-          {% for social in my.social %}
-            <li><a href="{{ social.link }}"><i class=" {{ social.icon-class }}"></i></a></li>
-          {% endfor %}
-        </ul>
-    </section>
-
-    <section id="action">
-        <h2>MORE</h2>
-        <a href="{{ '/resume' | relative_url }}">Check out my resume</a>
-    </section>
+<h1 style="color: #FE9800;">Twilight Imperium Map Generator (PoK)</h1>
+<div class="tile-pane-radios">
+<input type="radio" checked="checked" name="tiles" id="tiles-button" onclick="generateTilePane('green')">Show Home Systems</button>
+<input type="radio" name="tiles" id="tiles-button" onclick="generateTilePane('blue')">Show Blue Tiles</button>
+<input type="radio" name="tiles" id="tiles-button" onclick="generateTilePane('red')">Show Red Tiles</button>
+<input type="radio" name="tiles" id="tiles-button" onclick="generateTilePane('hyper')">Show Hyperlanes</button>
 </div>
+
+<button id="string-buts" onclick="clearString()">Clear Input</button>
+<input type="text" id="mapString" placeholder="Enter map string">
+<button id="string-buts" onclick="generateMapFromTileString()">Load Map</button>
+<button id="string-buts" onclick="generateMap()">Generate Random Map</button>
+<p id="used-tiles-display"></p>
+
+<div class="tile-pane" id="tile-pane"></div> <!-- Add a container for the tile pane -->
+<div class="map-container" id="map-container"></div>
+
+<script src="./map-gen.js"></script>
+</body>
+</html>
