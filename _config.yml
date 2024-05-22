@@ -38,13 +38,13 @@ gitalk:
   client_id: baeea51800be67550b52
   client_secret: 4a521ccafa96b8b2b128659c35468bdd7ba5d4aa
   repo: jekyll-theme-textalic
-  owner: unifreak
-  admin: unifreak
+  owner: 
+  admin: 
   distraction_free_mode: true
 
 
 google_analytics:
-  id: "" # Required if you use google analytics. Replace with your tracking id here
+  id: G-CYCP7MTKDG # Required if you use google analytics. Replace with your tracking id here
 
 collections: # Define post series here
   home_rules:
